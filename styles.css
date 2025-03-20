@@ -429,7 +429,6 @@ footer {
     .typewriter { font-size: 2.5em; } /* Smaller name */
     .subtitle { font-size: 1em; } /* Smaller subtitle */
     .sticky-nav { padding: 10px 20px; } /* Reduced padding */
-    .sticky-nav ul { display: none; } /* Hide nav links */
     .project-grid { grid-template-columns: 1fr; } /* Single column for projects */
     .intro-section { padding: 40px 15px; } /* Adjusted padding for About Me */
     .scrollbar-nav { display: none; } /* Hide scrollbar navigation on mobile */
