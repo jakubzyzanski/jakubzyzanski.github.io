@@ -34,7 +34,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
             form.reset();
             setTimeout(() => {
                 messageDiv.style.display = 'none';
-            }, 5000);
+            }, 10000);
         } else {
             throw new Error('Form submission failed');
         }

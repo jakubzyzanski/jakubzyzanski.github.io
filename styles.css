@@ -352,19 +352,6 @@ footer {
 .reveal:nth-child(1) { animation-delay: 0.2s; }
 .reveal:nth-child(2) { animation-delay: 0.4s; }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .typewriter { font-size: 2.5em; } /* Smaller name */
-    .subtitle { font-size: 1em; } /* Smaller subtitle */
-    .sticky-nav { padding: 10px 20px; } /* Reduced padding */
-    .sticky-nav ul { display: none; } /* Hide nav links */
-    .project-grid { grid-template-columns: 1fr; } /* Single column for projects */
-    .intro-section { padding: 40px 15px; } /* Adjusted padding for About Me */
-    .scrollbar-nav { right: 10px; } /* Closer to edge on small screens */
-    .scroll-dot { width: 8px; height: 8px; }/* Smaller dots */
-    .scroll-label { font-size: 0.7em; }/* Smaller labels */
-}
-
 /* Scrollbar navigation */
 .scrollbar-nav {
     position: fixed; /* Fixed position on the right */
@@ -435,4 +422,15 @@ footer {
 }
 .nav-logo a:hover {
     color: #21a1f1; /* Darker blue on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1446px) {
+    .typewriter { font-size: 2.5em; } /* Smaller name */
+    .subtitle { font-size: 1em; } /* Smaller subtitle */
+    .sticky-nav { padding: 10px 20px; } /* Reduced padding */
+    .sticky-nav ul { display: none; } /* Hide nav links */
+    .project-grid { grid-template-columns: 1fr; } /* Single column for projects */
+    .intro-section { padding: 40px 15px; } /* Adjusted padding for About Me */
+    .scrollbar-nav { display: none; } /* Hide scrollbar navigation on mobile */
 }
