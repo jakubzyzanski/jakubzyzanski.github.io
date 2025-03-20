@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for proper text display -->
+    <meta charset="UTF-8">
+    <!-- Responsive viewport settings for mobile compatibility -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title displayed in browser tab -->
+    <title>Jakub Zyzański - Portfolio</title>
+    <!-- Link to custom CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts: Poppins for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- JavaScript file loaded after HTML (deferred) -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Sticky navigation bar -->
+    <nav class="sticky-nav">
+        <!-- Logo or initials -->
+        <div class="nav-logo">JZ</div>
+        <!-- Navigation links -->
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#links">Links</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Me section positioned above header -->
+    <section id="about" class="section intro-section reveal">
+        <h2>About Me</h2>
+        <!-- Personal description -->
+        <p>I'm an ICT Engineer passionate about Linux administration, AWS cloud solutions, and process automation. With a strong foundation in system monitoring, scripting, and cloud architecture, I deliver efficient and innovative solutions to complex technical challenges.</p>
+    </section>
+
+    <!-- Header section with name and subtitle -->
+    <header class="parallax-header">
+        <div class="header-content">
+            <!-- Name with typewriter animation -->
+            <h1 class="typewriter">Jakub Zyzański</h1>
+            <!-- Subtitle describing skills or roles -->
+            <p class="subtitle">Linux Enthusiast  |  Cloud Specialist  |  Tech Troubleshooter</p>
+            <!-- Call-to-action button linking to projects -->
+            <a href="#projects" class="cta-button">Discover My Work</a>
+        </div>
+    </header>
+
+    <!-- Projects section -->
+    <section id="projects" class="section reveal">
+        <h2>Projects</h2>
+        <!-- Grid container for project cards -->
+        <div class="project-grid">
+            <!-- Project card 1 -->
+            <div class="project-card" style="--card-bg: linear-gradient(135deg, #e0f7fa, #3dcbde);">
+                <h3>EC2 metadata collector</h3>
+                <p>Bash script that gathers AWS EC2 instance metadata and uploads it to an S3 bucket.</p>
+                <p class="tech">Tech: AWS, Bash, Linux</p>
+                <a href="https://github.com/jakubzyzanski/ec2_metadata_upload_s3" target="_blank">View on GitHub</a>
+            </div>
+            <!-- Project card 2 -->
+            <div class="project-card" style="--card-bg: linear-gradient(135deg, #e7f3ea, #50d468);">
+                <h3>ESXi hosts ping</h3>
+                <p>PowerShell script for pinging ESXi Hosts from ServiceNow.<br><br></p>
+                <p class="tech">Tech: PowerShell</p>
+                <a href="https://github.com/jakubzyzanski/ESXi-hosts-ping" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Links section for social media -->
+    <section id="links" class="section reveal">
+        <h2>Connect with Me</h2>
+        <!-- List of social media links -->
+        <ul class="link-list">
+            <li>
+                <a href="https://www.linkedin.com/in/jakub-zyzanski-jz90/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/jakubzyzanski" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </li>
+        </ul>
+    </section>
+
+<!-- Contact section with form -->
+<section id="contact" class="section reveal">
+    <h2>Contact Me</h2>
+    <!-- Form with Formspree endpoint -->
+    <form id="contact-form" action="https://formspree.io/f/xzzedlnb" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <!-- Hidden field for subject (optional) -->
+        <input type="hidden" name="_subject" value="New Contact Form Submission">
+        <button type="submit">Send Message</button>
+    </form>
+    <!-- Placeholder for success message -->
+    <div id="form-message" style="display: none; color: #61dafb; text-align: center; margin-top: 20px;"></div>
+</section>
+
+    <!-- Footer with copyright -->
+    <footer>
+        <p>© 2025 Jakub Zyzański. All rights reserved.</p>
+    </footer>
+</body>
+</html>

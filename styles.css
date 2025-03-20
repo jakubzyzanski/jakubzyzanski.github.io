@@ -1,0 +1,359 @@
+/* Reset default margins, padding, and set box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles: font, background color, text color, and layout */
+body {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    background: #0d1b2a; /* Dark navy background */
+    color: #e0e0e0; /* Light gray text */
+    line-height: 1.6; /* Improved readability */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Sticky navigation bar styling */
+.sticky-nav {
+    position: sticky; /* Sticks to top when scrolling */
+    top: 0; /* Aligns to top of viewport */
+    background: rgba(13, 27, 42, 0.95); /* Dark navy with transparency */
+    backdrop-filter: blur(10px); /* Blur effect for modern look */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Vertically center content */
+    padding: 15px 40px; /* Padding for spacing */
+    z-index: 1000; /* Stay above other elements */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Navigation logo styling */
+.nav-logo {
+    font-size: 1.5em; /* Larger font size */
+    font-weight: 700; /* Bold text */
+    color: #61dafb; /* Light blue accent */
+}
+
+/* Navigation list styling */
+.sticky-nav ul {
+    list-style: none; /* Remove bullets */
+    display: flex; /* Horizontal layout */
+}
+
+/* Navigation list items */
+.sticky-nav li {
+    margin-left: 30px; /* Space between items */
+}
+
+/* Navigation link styling */
+.sticky-nav a {
+    color: #e0e0e0; /* Light gray text */
+    text-decoration: none; /* No underline */
+    font-weight: 500; /* Medium bold */
+    transition: color 0.3s ease; /* Smooth color change */
+}
+
+/* Navigation link hover effect */
+.sticky-nav a:hover {
+    color: #61dafb; /* Light blue on hover */
+}
+
+/* About Me (intro) section styling */
+.intro-section {
+    padding: 30px 15px; /* Reduced padding for compact size */
+    max-width: 600px; /* Smaller width for rectangle */
+    margin: 20px auto; /* Centered with small margin */
+    background: rgba(30, 42, 56, 0.9); /* Semi-transparent navy */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center; /* Centered text */
+    position: relative; /* For z-index */
+    z-index: 10; /* Above header */
+}
+
+/* Intro section heading */
+.intro-section h2 {
+    font-size: 1.8em; /* Reduced heading size */
+    color: #61dafb; /* Light blue */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+/* Intro section paragraph */
+.intro-section p {
+    font-size: 1em; /* Reduced text size */
+    color: #b0bec5; /* Light grayish-blue */
+}
+
+/* Header with parallax effect */
+.parallax-header {
+    height: 60vh; /* Moderate height for spacing */
+    background: linear-gradient(to bottom, rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 1)), url('https://source.unsplash.com/random/1920x1080?tech') center/cover no-repeat; /* Gradient over tech image */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    position: relative; /* For layering */
+    margin-top: 0; /* No overlap with About Me */
+}
+
+/* Header content container */
+.header-content {
+    padding-top: 0; /* No top padding, centered by flex */
+    animation: fadeInUp 1.5s ease-out; /* Fade-in animation */
+}
+
+/* Typewriter effect for name */
+.typewriter {
+    font-size: 3em; /* Large font for name */
+    font-weight: 700; /* Bold text */
+    color: #fff; /* White text */
+    border-right: 0.15em solid #61dafb; /* Blinking cursor */
+    white-space: nowrap; /* Single line */
+    overflow: hidden; /* Hide overflow for animation */
+    animation: typing 3s steps(20, end), blink-caret 0.75s step-end infinite; /* Typing and blink effects */
+}
+
+/* Subtitle styling */
+.subtitle {
+    font-size: 1.2em; /* Smaller subtitle */
+    margin: 15px 0; /* Vertical spacing */
+    color: #b0bec5; /* Light grayish-blue */
+}
+
+/* Call-to-action button styling */
+.cta-button {
+    display: inline-block; /* Inline with block properties */
+    background: #61dafb; /* Light blue background */
+    color: #0d1b2a; /* Dark navy text */
+    padding: 12px 30px; /* Padding for size */
+    border-radius: 50px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    font-weight: 600; /* Bold text */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* CTA button hover effect */
+.cta-button:hover {
+    background: #21a1f1; /* Darker blue */
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 10px 20px rgba(33, 161, 241, 0.5); /* Shadow */
+}
+
+/* General section styling */
+.section {
+    padding: 80px 20px; /* Large padding */
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Centered */
+    position: relative; /* For animations */
+}
+
+/* Section heading styling */
+.section h2 {
+    font-size: 2.5em; /* Large heading */
+    color: #61dafb; /* Light blue */
+    text-align: center; /* Centered */
+    margin-bottom: 40px; /* Space below */
+    position: relative; /* For pseudo-element */
+}
+
+/* Underline effect for section headings */
+.section h2::after {
+    content: ''; /* Empty content */
+    width: 60px; /* Width of underline */
+    height: 4px; /* Thickness */
+    background: #21a1f1; /* Darker blue */
+    display: block; /* Block element */
+    margin: 10px auto; /* Centered with spacing */
+    border-radius: 2px; /* Slightly rounded */
+}
+
+/* Project grid layout */
+.project-grid {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 30px; /* Space between cards */
+}
+
+/* Project card styling */
+.project-card {
+    background: var(--card-bg); /* Custom gradient from HTML */
+    padding: 25px; /* Inner padding */
+    border-radius: 15px; /* Rounded corners */
+    position: relative; /* For hover effects */
+    overflow: hidden; /* Hide overflow */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover transition */
+    cursor: pointer; /* Hand cursor */
+}
+
+/* Project card hover effect */
+.project-card:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg); /* 3D lift effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Larger shadow */
+}
+
+/* Project card heading */
+.project-card h3 {
+    color: #0d1b2a; /* Dark navy text */
+    font-size: 1.5em; /* Medium heading */
+    margin-bottom: 10px; /* Space below */
+}
+
+/* Project card paragraph */
+.project-card p {
+    color: #455a64; /* Grayish text */
+}
+
+/* Technology text in project card */
+.project-card .tech {
+    font-size: 0.9em; /* Smaller text */
+    color: #78909c; /* Lighter gray */
+    margin: 10px 0; /* Spacing */
+}
+
+/* Project card link */
+.project-card a {
+    color: #0288d1; /* Blue link */
+    font-weight: 600; /* Bold text */
+    text-decoration: none; /* No underline */
+}
+
+/* Project card link hover */
+.project-card a:hover {
+    color: #21a1f1; /* Darker blue */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Links list styling */
+.link-list {
+    list-style: none; /* No bullets */
+    text-align: center; /* Centered */
+}
+
+/* Links list items */
+.link-list li {
+    margin: 20px 0; /* Vertical spacing */
+}
+
+/* Links styling */
+.link-list a {
+    color: #61dafb; /* Light blue */
+    font-size: 1.3em; /* Larger text */
+    text-decoration: none; /* No underline */
+    display: flex; /* Flexbox for icon alignment */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    gap: 10px; /* Space between icon and text */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Links hover effect */
+.link-list a:hover {
+    color: #21a1f1; /* Darker blue */
+    text-shadow: 0 0 10px rgba(33, 161, 241, 0.5); /* Glow effect */
+}
+
+/* FontAwesome icons in links */
+.link-list i {
+    font-size: 1.5em; /* Larger icons */
+    transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+/* Icon hover effect */
+.link-list a:hover i {
+    transform: scale(1.2); /* Enlarge icon on hover */
+}
+
+/* Contact form styling */
+form {
+    max-width: 600px; /* Max width for form */
+    margin: 0 auto; /* Centered */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Vertical stacking */
+}
+
+/* Form inputs and textarea */
+input, textarea {
+    width: 100%; /* Full width */
+    padding: 15px; /* Inner padding */
+    margin: 15px 0; /* Vertical spacing */
+    border: 2px solid #455a64; /* Gray border */
+    border-radius: 10px; /* Rounded corners */
+    background: #1e2a38; /* Dark navy background */
+    color: #e0e0e0; /* Light text */
+    transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+/* Form input focus effect */
+input:focus, textarea:focus {
+    border-color: #61dafb; /* Light blue on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Form submit button */
+button {
+    padding: 15px 30px; /* Padding for size */
+    background: #61dafb; /* Light blue */
+    border: none; /* No border */
+    border-radius: 50px; /* Rounded corners */
+    font-weight: 600; /* Bold text */
+    color: #0d1b2a; /* Dark navy text */
+    cursor: pointer; /* Hand cursor */
+    transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+/* Button hover effect */
+button:hover {
+    background: #21a1f1; /* Darker blue */
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 10px 20px rgba(33, 161, 241, 0.5); /* Shadow */
+}
+
+/* Footer styling */
+footer {
+    text-align: center; /* Centered text */
+    padding: 30px; /* Padding */
+    background: #0d1b2a; /* Dark navy */
+    color: #b0bec5; /* Light grayish-blue */
+    font-size: 0.9em; /* Smaller text */
+}
+
+/* Animations */
+/* Typing animation for name */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Cursor blink animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #61dafb; }
+}
+
+/* Fade-in animation for header and sections */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Reveal effect for sections */
+.reveal {
+    opacity: 0; /* Start hidden */
+    transform: translateY(50px); /* Start below */
+    animation: fadeInUp 1s ease-out forwards; /* Fade in and slide up */
+}
+
+/* Staggered animation delays */
+.reveal:nth-child(1) { animation-delay: 0.2s; }
+.reveal:nth-child(2) { animation-delay: 0.4s; }
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .typewriter { font-size: 2.5em; } /* Smaller name */
+    .subtitle { font-size: 1em; } /* Smaller subtitle */
+    .sticky-nav { padding: 10px 20px; } /* Reduced padding */
+    .sticky-nav ul { display: none; } /* Hide nav links */
+    .project-grid { grid-template-columns: 1fr; } /* Single column for projects */
+    .intro-section { padding: 40px 15px; } /* Adjusted padding for About Me */
+}
