@@ -93,3 +93,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
+document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.sticky-nav ul').classList.toggle('active');
+});
+

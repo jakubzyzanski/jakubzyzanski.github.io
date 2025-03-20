@@ -424,6 +424,14 @@ footer {
     color: #21a1f1; /* Darker blue on hover */
 }
 
+/* Hamburger menu styling */
+.hamburger {
+    display: none; /* Hidden by default on larger screens */
+    font-size: 1.5em;
+    color: #61dafb;
+    cursor: pointer;
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 1446px) {
     .typewriter { font-size: 2.5em; } /* Smaller name */
@@ -432,4 +440,29 @@ footer {
     .project-grid { grid-template-columns: 1fr; } /* Single column for projects */
     .intro-section { padding: 40px 15px; } /* Adjusted padding for About Me */
     .scrollbar-nav { display: none; } /* Hide scrollbar navigation on mobile */
+}
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger icon on small screens */
+    }
+
+    .sticky-nav ul {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(13, 27, 42, 0.95);
+        padding: 10px 0;
+    }
+
+    .sticky-nav ul.active {
+        display: flex; /* Show when active */
+    }
+
+    .sticky-nav li {
+        margin: 10px 0;
+        text-align: center;
+    }
 }
