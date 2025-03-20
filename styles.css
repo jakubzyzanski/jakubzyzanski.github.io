@@ -71,6 +71,10 @@ body {
     position: relative; /* For z-index */
     z-index: 10; /* Above header */
 }
+.intro-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(33, 161, 241, 0.5);
+}
 
 /* Intro section heading */
 .intro-section h2 {
@@ -356,4 +360,79 @@ footer {
     .sticky-nav ul { display: none; } /* Hide nav links */
     .project-grid { grid-template-columns: 1fr; } /* Single column for projects */
     .intro-section { padding: 40px 15px; } /* Adjusted padding for About Me */
+    .scrollbar-nav { right: 10px; } /* Closer to edge on small screens */
+    .scroll-dot { width: 8px; height: 8px; }/* Smaller dots */
+    .scroll-label { font-size: 0.7em; }/* Smaller labels */
+}
+
+/* Scrollbar navigation */
+.scrollbar-nav {
+    position: fixed; /* Fixed position on the right */
+    right: 20px; /* Distance from right edge */
+    top: 50%; /* Centered vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    display: flex; /* Vertical layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-end; /* Align items to the right */
+    z-index: 1000; /* Above other elements */
+}
+
+/* Container for each dot and label */
+.scroll-item {
+    display: flex; /* Flexbox to align dot and label */
+    align-items: center; /* Center vertically */
+    margin: 10px 0; /* Space between items */
+    position: relative; /* For label positioning */
+}
+
+/* Individual scroll dots */
+.scroll-dot {
+    width: 12px; /* Size of the dot */
+    height: 12px; /* Size of the dot */
+    background: #61dafb; /* Light blue color */
+    border-radius: 50%; /* Circular shape */
+    display: block; /* Block element */
+    transition: all 0.3s ease; /* Smooth transition */
+    opacity: 0.7; /* Slightly transparent */
+}
+
+/* Hover effect for dots */
+.scroll-dot:hover {
+    opacity: 1; /* Full opacity on hover */
+    transform: scale(1.3); /* Slightly larger */
+}
+
+/* Active state for the current section */
+.scroll-dot.active {
+    background: #21a1f1; /* Darker blue for active section */
+    opacity: 1; /* Fully opaque */
+    transform: scale(1.5); /* Larger when active */
+}
+
+/* Labels for scroll dots */
+.scroll-label {
+    position: absolute; /* Position relative to scroll-item */
+    right: 20px; /* Distance from the dot */
+    color: #61dafb; /* Light blue color */
+    font-size: 0.9em; /* Smaller font */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+    pointer-events: none; /* Prevent clicking on label */
+}
+
+/* Show label on hover or when dot is active */
+.scroll-item:hover .scroll-label,
+.scroll-dot.active + .scroll-label {
+    opacity: 1; /* Show label */
+}
+
+/* Style for the logo link */
+.nav-logo a {
+    color: #61dafb; /* Light blue color, matching existing style */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.5em; /* Match existing font size */
+    font-weight: 700; /* Match existing font weight */
+}
+.nav-logo a:hover {
+    color: #21a1f1; /* Darker blue on hover */
 }

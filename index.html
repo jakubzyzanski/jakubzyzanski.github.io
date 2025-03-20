@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="description" content="Explore my portfolio: ICT Engineer specializing in Linux administration, AWS cloud solutions, and scripting projects.">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-33J3C6CJ2H"></script>
     <script>
@@ -15,7 +17,7 @@
     <!-- Responsive viewport settings for mobile compatibility -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page title displayed in browser tab -->
-    <title>Jakub Zyzański - Portfolio</title>
+    <title>Jakub Zyzański - ICT Engineer Portfolio | Linux, AWS, Automation</title>
     <!-- Link to custom CSS stylesheet -->
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts: Poppins for typography -->
@@ -26,10 +28,10 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Sticky navigation bar -->
+       <!-- Sticky navigation bar -->
     <nav class="sticky-nav">
-        <!-- Logo or initials -->
-        <div class="nav-logo">JZ</div>
+        <!-- Logo or initials with link to top -->
+        <div class="nav-logo"><a href="#about">JZ</a></div>
         <!-- Navigation links -->
         <ul>
             <li><a href="#about">About</a></li>
@@ -98,21 +100,41 @@
         </ul>
     </section>
 
-<!-- Contact section with form -->
-<section id="contact" class="section reveal">
-    <h2>Contact Me</h2>
-    <!-- Form with Formspree endpoint -->
-    <form id="contact-form" action="https://formspree.io/f/xzzedlnb" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <!-- Hidden field for subject (optional) -->
-        <input type="hidden" name="_subject" value="New Contact Form Submission">
-        <button type="submit">Send Message</button>
-    </form>
-    <!-- Placeholder for success message -->
-    <div id="form-message" style="display: none; color: #61dafb; text-align: center; margin-top: 20px;"></div>
-</section>
+    <!-- Contact section with form -->
+    <section id="contact" class="section reveal">
+        <h2>Contact Me</h2>
+        <!-- Form with Formspree endpoint -->
+        <form id="contact-form" action="https://formspree.io/f/xzzedlnb" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <!-- Hidden field for subject (optional) -->
+            <input type="hidden" name="_subject" value="New Contact Form Submission">
+            <button type="submit">Send Message</button>
+        </form>
+        <!-- Placeholder for success message -->
+        <div id="form-message" style="display: none; color: #61dafb; text-align: center; margin-top: 20px;"></div>
+    </section>
+
+    <!-- Scrollbar navigation -->
+    <div class="scrollbar-nav">
+        <div class="scroll-item">
+            <a href="#about" class="scroll-dot" data-section="about"></a>
+            <span class="scroll-label">About</span>
+        </div>
+        <div class="scroll-item">
+            <a href="#projects" class="scroll-dot" data-section="projects"></a>
+            <span class="scroll-label">Projects</span>
+        </div>
+        <div class="scroll-item">
+            <a href="#links" class="scroll-dot" data-section="links"></a>
+            <span class="scroll-label">Links</span>
+        </div>
+        <div class="scroll-item">
+            <a href="#contact" class="scroll-dot" data-section="contact"></a>
+            <span class="scroll-label">Contact</span>
+        </div>
+    </div>
 
     <!-- Footer with copyright -->
     <footer>
