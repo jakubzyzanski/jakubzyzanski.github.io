@@ -2,9 +2,24 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        
+        const targetId = this.getAttribute('href'); // Get the target section ID (e.g., #about)
+        const targetElement = document.querySelector(targetId); // Get the target element
+        
+        if (targetElement) {
+            // Get the height of the sticky navigation bar
+            const navBar = document.querySelector('.sticky-nav');
+            const navBarHeight = navBar ? navBar.offsetHeight : 0;
+
+            // Calculate the target position, accounting for the nav bar height
+            const targetPosition = targetElement.offsetTop - navBarHeight;
+
+            // Scroll to the adjusted position
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
     });
 });
 
@@ -96,4 +111,3 @@ window.addEventListener('scroll', () => {
 document.querySelector('.hamburger').addEventListener('click', () => {
     document.querySelector('.sticky-nav ul').classList.toggle('active');
 });
-
