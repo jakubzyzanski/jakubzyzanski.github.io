@@ -7,458 +7,717 @@
 
 /* Body styles: font, background color, text color, and layout */
 body {
-    font-family: 'Poppins', sans-serif; /* Use Poppins font */
-    background: #0d1b2a; /* Dark navy background */
-    color: #e0e0e0; /* Light gray text */
-    line-height: 1.6; /* Improved readability */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #061729, #070f25); /* dark gradient */
+    color: #e0e0e0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Light theme styles with gradient */
+body.light-theme {
+    background: linear-gradient(to bottom, #ebf3fe, #d9f3ff);
+    color: #2d3748;
 }
 
 /* Sticky navigation bar styling */
 .sticky-nav {
-    position: sticky; /* Sticks to top when scrolling */
-    top: 0; /* Aligns to top of viewport */
-    background: rgba(13, 27, 42, 0.95); /* Dark navy with transparency */
-    backdrop-filter: blur(10px); /* Blur effect for modern look */
-    display: flex; /* Flexbox for layout */
-    justify-content: space-between; /* Space between logo and links */
-    align-items: center; /* Vertically center content */
-    padding: 15px 40px; /* Padding for spacing */
-    z-index: 1000; /* Stay above other elements */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    position: sticky;
+    top: 0;
+    background: rgba(8, 23, 40, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    margin: 10px;
+}
+
+/* Light theme nav - transparent to inherit body gradient */
+body.light-theme .sticky-nav {
+    background: rgba(234, 242, 254, 0.95); /* Slightly transparent to blend with gradient */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation logo styling */
 .nav-logo {
-    font-size: 1.5em; /* Larger font size */
-    font-weight: 700; /* Bold text */
-    color: #61dafb; /* Light blue accent */
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #61dafb;
+}
+
+/* Light theme logo */
+body.light-theme .nav-logo {
+    color: #2b6cb0;
 }
 
 /* Navigation list styling */
 .sticky-nav ul {
-    list-style: none; /* Remove bullets */
-    display: flex; /* Horizontal layout */
+    list-style: none;
+    display: flex;
 }
 
 /* Navigation list items */
 .sticky-nav li {
-    margin-left: 30px; /* Space between items */
+    margin-left: 30px;
 }
 
 /* Navigation link styling */
 .sticky-nav a {
-    color: #e0e0e0; /* Light gray text */
-    text-decoration: none; /* No underline */
-    font-weight: 500; /* Medium bold */
-    transition: color 0.3s ease; /* Smooth color change */
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Light theme nav links */
+body.light-theme .sticky-nav a {
+    color: #2d3748;
 }
 
 /* Navigation link hover effect */
 .sticky-nav a:hover {
-    color: #61dafb; /* Light blue on hover */
+    color: #61dafb;
+}
+
+/* Light theme nav link hover */
+body.light-theme .sticky-nav a:hover {
+    color: #2b6cb0;
 }
 
 /* About Me (intro) section styling */
 .intro-section {
-    padding: 30px 15px; /* Reduced padding for compact size */
-    max-width: 600px; /* Smaller width for rectangle */
-    margin: 20px auto; /* Centered with small margin */
-    background: rgba(30, 42, 56, 0.9); /* Semi-transparent navy */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    text-align: center; /* Centered text */
-    position: relative; /* For z-index */
-    z-index: 10; /* Above header */
+    padding: 30px 15px;
+    max-width: 600px;
+    margin: 20px auto;
+    background: rgba(30, 42, 56, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    z-index: 10;
 }
+
+/* Light theme intro section - transparent to inherit body gradient */
+body.light-theme .intro-section {
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Intro section hover effect */
 .intro-section:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(33, 161, 241, 0.5);
 }
 
+/* Light theme intro hover */
+body.light-theme .intro-section:hover {
+    box-shadow: 0 10px 20px rgba(43, 108, 176, 0.3);
+}
+
 /* Intro section heading */
 .intro-section h2 {
-    font-size: 1.8em; /* Reduced heading size */
-    color: #61dafb; /* Light blue */
-    margin-bottom: 15px; /* Space below heading */
+    font-size: 1.8em;
+    color: #61dafb;
+    margin-bottom: 15px;
+}
+
+/* Light theme intro heading */
+body.light-theme .intro-section h2 {
+    color: #2b6cb0;
 }
 
 /* Intro section paragraph */
 .intro-section p {
-    font-size: 1em; /* Reduced text size */
-    color: #b0bec5; /* Light grayish-blue */
+    font-size: 1em;
+    color: #b0bec5;
 }
 
-/* Header with parallax effect */
+/* Light theme intro paragraph */
+body.light-theme .intro-section p {
+    color: #4a5568;
+}
+
+/* Header section */
 .parallax-header {
-    height: 60vh; /* Moderate height for spacing */
-    background: linear-gradient(to bottom, rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 1)), url('https://source.unsplash.com/random/1920x1080?tech') center/cover no-repeat; /* Gradient over tech image */
-    display: flex; /* Flexbox for centering */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    text-align: center; /* Center text */
-    position: relative; /* For layering */
-    margin-top: 0; /* No overlap with About Me */
+    height: 60vh;
+    background: transparent; /* Fully transparent to inherit body background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-top: 0;
+}
+
+/* Light theme header - no additional background */
+body.light-theme .parallax-header {
+    background: transparent; /* Inherits body gradient */
 }
 
 /* Header content container */
 .header-content {
-    padding-top: 0; /* No top padding, centered by flex */
-    animation: fadeInUp 1.5s ease-out; /* Fade-in animation */
+    padding-top: 0;
+    animation: fadeInUp 1.5s ease-out;
 }
 
 /* Typewriter effect for name */
 .typewriter {
-    font-size: 3em; /* Large font for name */
-    font-weight: 700; /* Bold text */
-    color: #fff; /* White text */
-    border-right: 0.15em solid #61dafb; /* Blinking cursor */
-    white-space: nowrap; /* Single line */
-    overflow: hidden; /* Hide overflow for animation */
-    animation: typing 3s steps(20, end), blink-caret 0.75s step-end infinite; /* Typing and blink effects */
+    font-size: 3em;
+    font-weight: 700;
+    color: #fff;
+    border-right: 0.15em solid #61dafb;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(20, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Light theme typewriter */
+body.light-theme .typewriter {
+    color: #2d3748;
+    border-right: 0.15em solid #2b6cb0;
+}
+
+/* Light theme typewriter blink */
+body.light-theme .typewriter {
+    animation: typing 3s steps(20, end), blink-caret-light 0.75s step-end infinite;
 }
 
 /* Subtitle styling */
 .subtitle {
-    font-size: 1.2em; /* Smaller subtitle */
-    margin: 15px 0; /* Vertical spacing */
-    color: #b0bec5; /* Light grayish-blue */
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: #b0bec5;
+}
+
+/* Light theme subtitle */
+body.light-theme .subtitle {
+    color: #4a5568;
 }
 
 /* Call-to-action button styling */
 .cta-button {
-    display: inline-block; /* Inline with block properties */
-    background: #61dafb; /* Light blue background */
-    color: #0d1b2a; /* Dark navy text */
-    padding: 12px 30px; /* Padding for size */
-    border-radius: 50px; /* Rounded corners */
-    text-decoration: none; /* No underline */
-    font-weight: 600; /* Bold text */
-    transition: all 0.3s ease; /* Smooth transition */
+    display: inline-block;
+    background: #61dafb;
+    color: #0d1b2a;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Light theme CTA button */
+body.light-theme .cta-button {
+    background: #2b6cb0;
+    color: #fff;
 }
 
 /* CTA button hover effect */
 .cta-button:hover {
-    background: #21a1f1; /* Darker blue */
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 10px 20px rgba(33, 161, 241, 0.5); /* Shadow */
+    background: #21a1f1;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(33, 161, 241, 0.5);
+}
+
+/* Light theme CTA hover */
+body.light-theme .cta-button:hover {
+    background: #1a4971;
+    box-shadow: 0 10px 20px rgba(43, 108, 176, 0.3);
 }
 
 /* General section styling */
 .section {
-    padding: 80px 20px; /* Large padding */
-    max-width: 1200px; /* Max width for content */
-    margin: 0 auto; /* Centered */
-    position: relative; /* For animations */
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    background: transparent; /* Transparent to inherit body background */
+}
+
+/* Light theme section - no additional background */
+body.light-theme .section {
+    background: transparent; /* Inherits body gradient */
 }
 
 /* Section heading styling */
 .section h2 {
-    font-size: 2.5em; /* Large heading */
-    color: #61dafb; /* Light blue */
-    text-align: center; /* Centered */
-    margin-bottom: 40px; /* Space below */
-    position: relative; /* For pseudo-element */
+    font-size: 2.5em;
+    color: #61dafb;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Light theme section heading */
+body.light-theme .section h2 {
+    color: #2b6cb0;
 }
 
 /* Underline effect for section headings */
 .section h2::after {
-    content: ''; /* Empty content */
-    width: 60px; /* Width of underline */
-    height: 4px; /* Thickness */
-    background: #21a1f1; /* Darker blue */
-    display: block; /* Block element */
-    margin: 10px auto; /* Centered with spacing */
-    border-radius: 2px; /* Slightly rounded */
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #21a1f1;
+    display: block;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Light theme section heading underline */
+body.light-theme .section h2::after {
+    background: #2b6cb0;
 }
 
 /* Project grid layout */
 .project-grid {
-    display: grid; /* Grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-    gap: 30px; /* Space between cards */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
 /* Project card styling */
 .project-card {
-    background: var(--card-bg); /* Custom gradient from HTML */
-    padding: 25px; /* Inner padding */
-    border-radius: 15px; /* Rounded corners */
-    position: relative; /* For hover effects */
-    overflow: hidden; /* Hide overflow */
-    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover transition */
-    cursor: pointer; /* Hand cursor */
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
 }
 
 /* Project card hover effect */
 .project-card:hover {
-    transform: translateY(-10px) rotateX(5deg) rotateY(5deg); /* 3D lift effect */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Larger shadow */
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Project card heading */
 .project-card h3 {
-    color: #0d1b2a; /* Dark navy text */
-    font-size: 1.5em; /* Medium heading */
-    margin-bottom: 10px; /* Space below */
+    color: #0d1b2a;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Light theme project card heading */
+body.light-theme .project-card h3 {
+    color: #2d3748;
 }
 
 /* Project card paragraph */
 .project-card p {
-    color: #455a64; /* Grayish text */
+    color: #455a64;
+}
+
+/* Light theme project card paragraph */
+body.light-theme .project-card p {
+    color: #4a5568;
 }
 
 /* Technology text in project card */
 .project-card .tech {
-    font-size: 0.9em; /* Smaller text */
-    color: #78909c; /* Lighter gray */
-    margin: 10px 0; /* Spacing */
+    font-size: 0.9em;
+    color: #78909c;
+    margin: 10px 0;
+}
+
+/* Light theme tech text */
+body.light-theme .project-card .tech {
+    color: #718096;
 }
 
 /* Project card link */
 .project-card a {
-    color: #0288d1; /* Blue link */
-    font-weight: 600; /* Bold text */
-    text-decoration: none; /* No underline */
+    color: #0288d1;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Light theme project card link */
+body.light-theme .project-card a {
+    color: #2b6cb0;
 }
 
 /* Project card link hover */
 .project-card a:hover {
-    color: #21a1f1; /* Darker blue */
-    text-decoration: underline; /* Underline on hover */
+    color: #21a1f1;
+    text-decoration: underline;
+}
+
+/* Light theme project card link hover */
+body.light-theme .project-card a:hover {
+    color: #1a4971;
 }
 
 /* Links list styling */
 .link-list {
-    list-style: none; /* No bullets */
-    text-align: center; /* Centered */
+    list-style: none;
+    text-align: center;
 }
 
 /* Links list items */
 .link-list li {
-    margin: 20px 0; /* Vertical spacing */
+    margin: 20px 0;
 }
 
 /* Links styling */
 .link-list a {
-    color: #61dafb; /* Light blue */
-    font-size: 1.3em; /* Larger text */
-    text-decoration: none; /* No underline */
-    display: flex; /* Flexbox for icon alignment */
-    align-items: center; /* Vertically center */
-    justify-content: center; /* Horizontally center */
-    gap: 10px; /* Space between icon and text */
-    transition: all 0.3s ease; /* Smooth transition */
+    color: #61dafb;
+    font-size: 1.3em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Light theme links */
+body.light-theme .link-list a {
+    color: #2b6cb0;
 }
 
 /* Links hover effect */
 .link-list a:hover {
-    color: #21a1f1; /* Darker blue */
-    text-shadow: 0 0 10px rgba(33, 161, 241, 0.5); /* Glow effect */
+    color: #21a1f1;
+    text-shadow: 0 0 10px rgba(33, 161, 241, 0.5);
+}
+
+/* Light theme links hover */
+body.light-theme .link-list a:hover {
+    color: #1a4971;
+    text-shadow: 0 0 10px rgba(43, 108, 176, 0.3);
 }
 
 /* FontAwesome icons in links */
 .link-list i {
-    font-size: 1.5em; /* Larger icons */
-    transition: transform 0.3s ease; /* Smooth scaling */
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
 }
 
 /* Icon hover effect */
 .link-list a:hover i {
-    transform: scale(1.2); /* Enlarge icon on hover */
+    transform: scale(1.2);
 }
 
 /* Contact form styling */
 form {
-    max-width: 600px; /* Max width for form */
-    margin: 0 auto; /* Centered */
-    display: flex; /* Flexbox layout */
-    flex-direction: column; /* Vertical stacking */
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Form inputs and textarea */
 input, textarea {
-    width: 100%; /* Full width */
-    padding: 15px; /* Inner padding */
-    margin: 15px 0; /* Vertical spacing */
-    border: 2px solid #455a64; /* Gray border */
-    border-radius: 10px; /* Rounded corners */
-    background: #1e2a38; /* Dark navy background */
-    color: #e0e0e0; /* Light text */
-    transition: border-color 0.3s ease; /* Smooth border transition */
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 2px solid #455a64;
+    border-radius: 15px;
+    background: #1e2a38;
+    color: #e0e0e0;
+    transition: border-color 0.3s ease;
+}
+
+/* Light theme form inputs */
+body.light-theme input,
+body.light-theme textarea {
+    border: 2px solid #e2e8f0;
+    background: rgba(255, 255, 255, 0.9); /* Slightly opaque white for contrast */
+    color: #2d3748;
 }
 
 /* Form input focus effect */
 input:focus, textarea:focus {
-    border-color: #61dafb; /* Light blue on focus */
-    outline: none; /* Remove default outline */
+    border-color: #61dafb;
+    outline: none;
+}
+
+/* Light theme form input focus */
+body.light-theme input:focus,
+body.light-theme textarea:focus {
+    border-color: #2b6cb0;
 }
 
 /* Form submit button */
 button {
-    padding: 15px 30px; /* Padding for size */
-    background: #61dafb; /* Light blue */
-    border: none; /* No border */
-    border-radius: 50px; /* Rounded corners */
-    font-weight: 600; /* Bold text */
-    color: #0d1b2a; /* Dark navy text */
-    cursor: pointer; /* Hand cursor */
-    transition: all 0.3s ease; /* Smooth hover transition */
+    padding: 15px 30px;
+    background: #61dafb;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #0d1b2a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Light theme form button */
+body.light-theme button {
+    background: #2b6cb0;
+    color: #fff;
 }
 
 /* Button hover effect */
 button:hover {
-    background: #21a1f1; /* Darker blue */
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 10px 20px rgba(33, 161, 241, 0.5); /* Shadow */
+    background: #21a1f1;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(33, 161, 241, 0.5);
 }
+
+/* Light theme button hover */
+body.light-theme button:hover {
+    background: #1a4971;
+    box-shadow: 0 10px 20px rgba(43, 108, 176, 0.3);
+}
+
+/* Theme toggle button styling */
+.theme-toggle-btn {
+    background: none;
+    border: 2px solid #61dafb;
+    color: #61dafb;
+    padding: 8px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Light theme toggle button */
+body.light-theme .theme-toggle-btn {
+    border: 2px solid #2b6cb0;
+    background: none; /* Remove blue background */
+    color: #2b6cb0; /* Change text color to match border */
+}
+
+/* Theme toggle button hover */
+.theme-toggle-btn:hover {
+    background: #61dafb;
+    color: #0d1b2a;
+    transform: translateY(-3px);
+}
+
+/* Light theme toggle button hover */
+body.light-theme .theme-toggle-btn:hover {
+    background: #2b6cb0; /* Blue background on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Ensures that the text inside the theme toggle button (<span>) is always visible */
+.theme-toggle-btn span {
+    display: inline;
+}
+
 
 /* Footer styling */
 footer {
-    text-align: center; /* Centered text */
-    padding: 30px; /* Padding */
-    background: #0d1b2a; /* Dark navy */
-    color: #b0bec5; /* Light grayish-blue */
-    font-size: 0.9em; /* Smaller text */
+    text-align: center;
+    padding: 30px;
+    background: transparent; /* Transparent to inherit body background */
+    color: #b0bec5;
+    font-size: 0.9em;
+}
+
+/* Light theme footer - no additional background */
+body.light-theme footer {
+    background: transparent; /* Inherits body gradient */
+    color: #4a5568;
+}
+
+/* Form message styling */
+#form-message {
+    color: #61dafb;
+}
+
+/* Light theme form message */
+body.light-theme #form-message {
+    color: #2b6cb0;
 }
 
 /* Animations */
-/* Typing animation for name */
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
 }
 
-/* Cursor blink animation */
 @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: #61dafb; }
 }
 
-/* Fade-in animation for header and sections */
+/* Light theme blink caret */
+@keyframes blink-caret-light {
+    from, to { border-color: transparent; }
+    50% { border-color: #2b6cb0; }
+}
+
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(50px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Reveal effect for sections */
 .reveal {
-    opacity: 0; /* Start hidden */
-    transform: translateY(50px); /* Start below */
-    animation: fadeInUp 1s ease-out forwards; /* Fade in and slide up */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
 }
 
-/* Staggered animation delays */
 .reveal:nth-child(1) { animation-delay: 0.2s; }
 .reveal:nth-child(2) { animation-delay: 0.4s; }
 
 /* Scrollbar navigation */
 .scrollbar-nav {
-    position: fixed; /* Fixed position on the right */
-    right: 20px; /* Distance from right edge */
-    top: 50%; /* Centered vertically */
-    transform: translateY(-50%); /* Adjust for vertical centering */
-    display: flex; /* Vertical layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-end; /* Align items to the right */
-    z-index: 1000; /* Above other elements */
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1000;
 }
 
-/* Container for each dot and label */
+/* Scroll item */
 .scroll-item {
-    display: flex; /* Flexbox to align dot and label */
-    align-items: center; /* Center vertically */
-    margin: 10px 0; /* Space between items */
-    position: relative; /* For label positioning */
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
 }
 
-/* Individual scroll dots */
+/* Scroll dots */
 .scroll-dot {
-    width: 12px; /* Size of the dot */
-    height: 12px; /* Size of the dot */
-    background: #61dafb; /* Light blue color */
-    border-radius: 50%; /* Circular shape */
-    display: block; /* Block element */
-    transition: all 0.3s ease; /* Smooth transition */
-    opacity: 0.7; /* Slightly transparent */
+    width: 12px;
+    height: 12px;
+    background: #61dafb;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.3s ease;
+    opacity: 0.7;
 }
 
-/* Hover effect for dots */
+/* Light theme scroll dots */
+body.light-theme .scroll-dot {
+    background: #2b6cb0;
+}
+
+/* Scroll dot hover */
 .scroll-dot:hover {
-    opacity: 1; /* Full opacity on hover */
-    transform: scale(1.3); /* Slightly larger */
+    opacity: 1;
+    transform: scale(1.3);
 }
 
-/* Active state for the current section */
+/* Active scroll dot */
 .scroll-dot.active {
-    background: #21a1f1; /* Darker blue for active section */
-    opacity: 1; /* Fully opaque */
-    transform: scale(1.5); /* Larger when active */
+    background: #21a1f1;
+    opacity: 1;
+    transform: scale(1.5);
 }
 
-/* Labels for scroll dots */
+/* Light theme active scroll dot */
+body.light-theme .scroll-dot.active {
+    background: #1a4971;
+}
+
+/* Scroll labels */
 .scroll-label {
-    position: absolute; /* Position relative to scroll-item */
-    right: 20px; /* Distance from the dot */
-    color: #61dafb; /* Light blue color */
-    font-size: 0.9em; /* Smaller font */
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.3s ease; /* Smooth fade-in */
-    pointer-events: none; /* Prevent clicking on label */
+    position: absolute;
+    right: 20px;
+    color: #61dafb;
+    font-size: 0.9em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
-/* Show label on hover or when dot is active */
+/* Light theme scroll labels */
+body.light-theme .scroll-label {
+    color: #2b6cb0;
+}
+
+/* Show label on hover or active */
 .scroll-item:hover .scroll-label,
 .scroll-dot.active + .scroll-label {
-    opacity: 1; /* Show label */
+    opacity: 1;
 }
 
 /* Style for the logo link */
 .nav-logo a {
-    color: #61dafb; /* Light blue color, matching existing style */
-    text-decoration: none; /* Remove underline */
-    font-size: 1.5em; /* Match existing font size */
-    font-weight: 700; /* Match existing font weight */
+    color: #61dafb;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
 }
+
+/* Light theme logo link */
+body.light-theme .nav-logo a {
+    color: #2b6cb0;
+}
+
 .nav-logo a:hover {
-    color: #21a1f1; /* Darker blue on hover */
+    color: #21a1f1;
+}
+
+/* Light theme logo link hover */
+body.light-theme .nav-logo a:hover {
+    color: #1a4971;
 }
 
 /* Hamburger menu styling */
 .hamburger {
-    display: none; /* Hidden by default on larger screens */
+    display: none;
     font-size: 1.5em;
     color: #61dafb;
     cursor: pointer;
 }
 
+/* Light theme hamburger */
+body.light-theme .hamburger {
+    color: #2b6cb0;
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 1446px) {
-    .typewriter { font-size: 2.5em; } /* Smaller name */
-    .subtitle { font-size: 1em; } /* Smaller subtitle */
-    .sticky-nav { padding: 10px 20px; } /* Reduced padding */
-    .project-grid { grid-template-columns: 1fr; } /* Single column for projects */
-    .intro-section { padding: 40px 15px; } /* Adjusted padding for About Me */
-    .scrollbar-nav { display: none; } /* Hide scrollbar navigation on mobile */
+    .typewriter { font-size: 2.5em; }
+    .subtitle { font-size: 1em; }
+    .sticky-nav { padding: 10px 20px; }
+    .project-grid { grid-template-columns: 1fr; }
+    .intro-section { padding: 40px 15px; }
+    .scrollbar-nav { display: none; }
 }
+
 @media (max-width: 768px) {
     .hamburger {
-        display: block; /* Show hamburger icon on small screens */
+        display: block;
     }
 
     .sticky-nav ul {
-        display: none; /* Hidden by default on mobile */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
         left: 0;
         width: 100%;
-        background: rgba(13, 27, 42, 0.95);
+        background: rgba(8, 23, 40, 0.95);
         padding: 10px 0;
     }
 
+    /* Light theme mobile nav */
+    body.light-theme .sticky-nav ul {
+        background: rgb(234, 242, 254);
+    }
+
     .sticky-nav ul.active {
-        display: flex; /* Show when active */
+        display: flex;
     }
 
     .sticky-nav li {

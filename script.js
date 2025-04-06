@@ -3,30 +3,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         
-        const targetId = this.getAttribute('href'); // Get the target section ID (e.g., #about)
-        const targetElement = document.querySelector(targetId); // Get the target element
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
         
         if (targetElement) {
-            // Get the height of the sticky navigation bar
             const navBar = document.querySelector('.sticky-nav');
             const navBarHeight = navBar ? navBar.offsetHeight : 0;
-
-            // Calculate the target position, accounting for the nav bar height
             const targetPosition = targetElement.offsetTop - navBarHeight;
 
-            // Scroll to the adjusted position
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
             });
         }
     });
-});
-
-// Parallax effect for header background
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('.parallax-header');
-    header.style.backgroundPositionY = `${window.scrollY * 0.5}px`;
 });
 
 // Handle form submission with AJAX
@@ -69,24 +59,20 @@ const scrollDots = document.querySelectorAll('.scroll-dot');
 window.addEventListener('scroll', () => {
     let currentSection = '';
 
-    // Detect the current section based on scroll position
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        const scrollPosition = window.scrollY + window.innerHeight / 2; // Middle of the viewport
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-        // Check if the section is in the viewport
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             currentSection = section.getAttribute('id');
         }
     });
 
-    // Special case for the top of the page (About section)
     if (window.scrollY < window.innerHeight / 2) {
-        currentSection = 'about'; // Force "About" section when near the top
+        currentSection = 'about';
     }
 
-    // Special case for the last section (Contact)
     const contactSection = document.querySelector('#contact');
     const contactTop = contactSection.offsetTop;
     const contactHeight = contactSection.clientHeight;
@@ -94,12 +80,10 @@ window.addEventListener('scroll', () => {
     const windowHeight = window.innerHeight;
     const scrollPosition = window.scrollY;
 
-    // If we're near the bottom of the page, activate Contact
     if (scrollPosition + windowHeight >= documentHeight - 50) {
         currentSection = 'contact';
     }
 
-    // Update active dot
     scrollDots.forEach(dot => {
         dot.classList.remove('active');
         if (dot.getAttribute('data-section') === currentSection) {
@@ -108,6 +92,38 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// Hamburger menu toggle
 document.querySelector('.hamburger').addEventListener('click', () => {
     document.querySelector('.sticky-nav ul').classList.toggle('active');
+});
+
+// Theme toggle functionality
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeText = themeToggleBtn.querySelector('span'); // Select the span element for text
+
+// Function to apply theme and update UI
+function applyTheme(isLightTheme) {
+    if (isLightTheme) {
+        document.body.classList.add('light-theme');
+    } else {
+        document.body.classList.remove('light-theme');
+    }
+    themeText.textContent = isLightTheme ? 'Light' : 'Dark'; // Update text
+    const icon = themeToggleBtn.querySelector('i');
+    icon.classList.remove('fa-sun', 'fa-moon'); // Remove all possible icons
+    icon.classList.add(isLightTheme ? 'fa-sun' : 'fa-moon'); // Add appropriate icon
+}
+
+// Load saved theme from localStorage on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme'); // Get saved theme
+    const isLightTheme = savedTheme === 'light'; // Check if saved theme is light
+    applyTheme(isLightTheme); // Apply the saved theme
+});
+
+// Toggle theme on button click and save to localStorage
+themeToggleBtn.addEventListener('click', () => {
+    const isLightTheme = !document.body.classList.contains('light-theme'); // Toggle state
+    applyTheme(isLightTheme); // Apply the new theme
+    localStorage.setItem('theme', isLightTheme ? 'light' : 'dark'); // Save to localStorage
 });
