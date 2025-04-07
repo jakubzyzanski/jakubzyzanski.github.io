@@ -717,8 +717,12 @@ body.light-theme .hamburger {
         background: rgb(234, 242, 254);
     }
 
+    /* Add rounded bottom corners when the menu is active */
     .sticky-nav ul.active {
         display: flex;
+        /* Round the bottom corners to match other elements */
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 
     .sticky-nav li {
