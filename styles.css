@@ -696,6 +696,7 @@ body.light-theme .hamburger {
     .scrollbar-nav { display: none; }
 }
 
+/* Mobile view adjustments */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -728,6 +729,13 @@ body.light-theme .hamburger {
     .sticky-nav li {
         margin: 10px 0;
         text-align: center;
+    }
+
+    /* Position the theme toggle absolutely in mobile view when active */
+    .sticky-nav ul.active .theme-toggle-btn {
+        position: absolute;
+        top: 20px; /* Adjust to align with "About" (relative to ul) */
+        left: 8px;
     }
 }
 
