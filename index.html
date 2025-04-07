@@ -46,6 +46,16 @@
         <meta name="twitter:image" content="https://jakubzyzanski.github.io/images/thumbnail.png" />
         <!-- JavaScript file loaded after HTML (deferred) -->
         <script src="script.js" defer></script>
+        <!-- Parallax background animation -->
+        <script>
+            document.addEventListener('mousemove', function(e) {
+                const x = (e.clientX / window.innerWidth) * 100;
+                const y = (e.clientY / window.innerHeight) * 100;
+                document.body.style.setProperty('--x', `${x}%`);
+                document.body.style.setProperty('--y', `${y}%`);
+            });
+        </script>
+        
     </head>
 <body>
     <!-- Sticky navigation bar -->

@@ -726,3 +726,17 @@ body.light-theme .hamburger {
         text-align: center;
     }
 }
+
+/* Parallax background animation */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(33, 161, 241, 0.2), transparent 90%);
+    z-index: -1;
+    transition: background 0.2s ease;
+    pointer-events: none;
+}
