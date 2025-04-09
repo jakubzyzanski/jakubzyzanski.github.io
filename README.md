@@ -14,6 +14,7 @@ You can view the live version of this website here:
 ```
 my-portfolio
 ├── 📁 images # Folder for images and assets
+├── 📁 files  # Folder for downloadable files (e.g., CV)
 ├── 📄 index.html # Main HTML file
 ├── 🎨 styles.css # CSS file for styling
 ├── 🎭 script.js # JavaScript file for interactivity
